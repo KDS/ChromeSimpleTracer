@@ -13,5 +13,5 @@
       "default_title": "Chrome Simple HTTP Tracer"
    },
    "offline_enabled": true,
-   "permissions": [ "webRequest", "webRequestBlocking", "tabs", "http://*/", "https://*/", "\u003Call_urls>", "debugger" ]
+   "permissions": [ "webRequest", "webRequestBlocking", "tabs", "http://*/", "https://*/", "<all_urls>", "debugger" ]
 }
