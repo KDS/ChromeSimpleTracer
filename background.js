@@ -1,6 +1,8 @@
 var requestSent = {},
     outputString = "",
-    isCapturing = false;
+    isCapturing = false,
+    idleIconPath = './icon.png',
+    recordingIconPath = './icon-rec.png';
 
 function resetSession() {
     requestSent = {};
@@ -28,10 +30,12 @@ function startCapturing(target) {
     chrome.debugger.attach(target, "1.0");
     chrome.debugger.sendCommand(target, "Network.enable");
     chrome.debugger.onEvent.addListener(onDebuggerEvent);
+    chrome.browserAction.setIcon({ path: recordingIconPath });
 }
 
 function stopCapturing(target) {
     chrome.debugger.detach(target);
+    chrome.browserAction.setIcon({ path: idleIconPath });
 }
 
 function onDebuggerEvent(debugee, message, params) {
