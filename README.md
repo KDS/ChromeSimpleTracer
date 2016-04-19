@@ -13,6 +13,7 @@ It allows non-developers such as Support or QA users of a web application to rec
 ## Usage
 
 Using it is as simple as it can be: 
+
 1. Click on the extension button
 2. Do the actions you want to record
 3. Click again on the extension button => a file appears in the download bar, which you can forward to the developers along with your issue report.
